@@ -1,6 +1,10 @@
-#root {
-  // max-width: 1280px;
-  // margin: 0 auto;
-  // padding: 2rem;
-  // text-align: center;
-}
+@use 'src/sass/fonts';
+@use 'src/sass/components/common/button';
+@use 'src/sass/components/common/card';
+@use 'src/sass/components/common/canva';
+@use 'src/sass/components/header/nav_bar';
+@use 'src/sass/components/header/cart';
+@use 'src/sass/components/header/orders_cart';
+@use 'src/sass/components/header/user_menu';
+@use 'src/sass/utils';
+@use 'src/sass/pages/login';
