@@ -1,17 +1,31 @@
 import { useState } from 'react'
-// import UserService from './User.service'
+import UserService from './User.service'
 import { TAuthConfig, TAuthConfigItem, TPermissions, TUser, DefaultPermissions, verifyPermission} from '../types'
 
 export const AuthService = () => {
   const [user, setUser] = useState<TUser | null>(null)
   const [permissions, setPermissions] = useState<TPermissions>(DefaultPermissions)
 
-  const login = () => {
-    console.log('login')
+  const login = async (userName: string) => {
+    try {
+      const user: TUser = await UserService.getUser(userName)
+      // console.log(user)
+      if (user.userName === userName) {
+        const permission = verifyPermission(user)
+        // console.log(permission)
+        setPermissions(permission)
+        setUser(user)
+      }
+    } catch (error) {
+      console.error(`authError: ${error}`)
+      throw new Error('Invalid credentials')
+    }
   }
 
   const logout = () => {
     console.log('logout')
+    setUser(null)
+    setPermissions(DefaultPermissions)
   }
 
   const AuthConfig: TAuthConfig = {
