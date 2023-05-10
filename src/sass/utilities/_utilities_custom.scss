@@ -1,0 +1,108 @@
+// border-breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .border#{$infix}-top {
+      border-top: $border-width solid $border-color !important;
+    }
+    .border#{$infix}-right {
+      border-right: $border-width solid $border-color !important;
+    }
+    .border#{$infix}-bottom {
+      border-bottom: $border-width solid $border-color !important;
+    }
+    .border#{$infix}-left {
+      border-left: $border-width solid $border-color !important;
+    }
+
+    .border#{$infix}-top-0 {
+      border-top: 0 !important;
+    }
+    .border#{$infix}-right-0 {
+      border-right: 0 !important;
+    }
+    .border#{$infix}-bottom-0 {
+      border-bottom: 0 !important;
+    }
+    .border#{$infix}-left-0 {
+      border-left: 0 !important;
+    }
+
+    .border#{$infix}-x {
+      border-left: $border-width solid $border-color !important;
+      border-right: $border-width solid $border-color !important;
+    }
+
+    .border#{$infix}-y {
+      border-top: $border-width solid $border-color !important;
+      border-bottom: $border-width solid $border-color !important;
+    }
+  }
+}
+
+$all-colors: map-merge-multiple($grays, $blues, $reds, $yellows, $greens, $teals, $cyans);
+
+$utilities: (
+  //text-{color}-{level}
+  'color':
+    map-merge(
+      map-get($utilities, 'color'),
+      (
+        values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors)),
+      )
+    ),
+  //bg-{color}-{level}
+  'background-color':
+    (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        'bg-opacity': 1,
+      ),
+      values: map-merge($utilities-bg-colors, ($all-colors)),
+    ),
+
+  //w-{level}
+  'width':
+    (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        24: 24rem,
+      ),
+    ),
+
+  // utilites for Cursor
+  'cursor':
+    (
+      property: cursor,
+      values: auto default pointer wait text move help not-allowed,
+    )
+);
+
+// $font-sizes: (
+//   1: 12rem,
+//   2: 10rem,
+//   3: 7rem,
+//   4: 5rem,
+//   5: 3rem,
+//   6: 2rem,
+// );
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "font-size": map-merge(
+//       map-get($utilities, "font-size"),
+//       (
+//         values: $font-sizes,
+//       ),
+//     ),
+//   )
+// );
