@@ -1,8 +1,8 @@
 ## React Yard Sale Hub
 
-This is a [React](https://react.dev/) project bootstrapped with [`npm create vite@latest`](https://vitejs.dev/), [Typescript](https://www.typescriptlang.org/), and [Tailwind](https://tailwindcss.com/) to implement a navigation system in a React.js application.
+This is a [React](https://react.dev/) project bootstrapped with [`npm create vite@latest`](https://vitejs.dev/), [Typescript](https://www.typescriptlang.org/), and [React Bootstrap](https://react-bootstrap.github.io/) to implement a navigation system in a React.js application.
 
-See project in 
+See project in https://react-yard-sale-hub.vercel.app/
 
 ## Installation
 

@@ -1,0 +1,20 @@
+.offcanvas.offcanvas-start {
+  .offcanvas-header .btn-close {
+    box-shadow: none;
+  }
+
+  .offcanvas-body .nav-link.link__list {
+    line-height: 1;
+
+    &.active {
+      color: #75b798 !important;
+    }
+    @media (min-width: 768px) {
+      &:hover {
+        color: #75b798 !important;
+        outline: 1px solid #75b798;
+        border-radius: 4px;
+      }
+    }
+  }
+}
