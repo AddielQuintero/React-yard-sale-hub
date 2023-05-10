@@ -1,0 +1,29 @@
+.cart {
+  &__shopping {
+    position: relative;
+
+    &-count {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-weight: bold;
+      position: absolute;
+      top: -7px;
+      right: -3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__subtotal {
+    display: flex;
+    flex-direction: column;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+  }
+}
