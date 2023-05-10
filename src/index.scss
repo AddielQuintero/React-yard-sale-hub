@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @import 'bootstrap/scss/functions';
+// @import 'bootstrap/scss/variables';
+// @import "bootstrap/scss/variables-dark";
+// @import "bootstrap/scss/maps";
+// @import "bootstrap/scss/mixins";
+// @import "bootstrap/scss/utilities";
+
+// custom_property
+@import 'sass/utilities/custom_property';
+
+// bootstrap
+@import 'bootstrap/scss/bootstrap.scss';
+
+// bootstrap-icons
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// utilities_customs
+@import 'sass/utilities/utilities_custom';
+
+@import 'bootstrap/scss/utilities/api';
