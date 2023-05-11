@@ -5,7 +5,7 @@ import { Product } from '@components'
 export const OrdersDetail = () => {
   const { state } = useLocation()
   const navigate = useNavigate()
-
+  console.log(state)
   return (
     <Container>
       <Row>
