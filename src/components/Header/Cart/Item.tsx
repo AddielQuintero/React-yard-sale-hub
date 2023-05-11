@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom'
+import { Price } from '@components'
 import { useNavigate } from 'react-router-dom'
 
 export const Item = (props: any) => {
@@ -18,7 +18,7 @@ export const Item = (props: any) => {
         </figure>
 
         <div className=" d-flex flex-column justify-content-between">
-          <span onClick={handle} className="text-900 text-decoration-none cursor-pointer">
+          <span onClick={handle} className="text-900 text-underline-hover cursor-pointer text-clamp">
             {item.name}
           </span>
           <span className="fw-semibold">1x</span>
@@ -28,7 +28,7 @@ export const Item = (props: any) => {
           <span className="cursor-pointer">
             <i className="bi bi-trash fs-5 "></i>
           </span>
-          <span className="text-600">U$S {item.price}</span>
+          <Price className="text-600" price={item.price} />
         </div>
       </li>
     </>
