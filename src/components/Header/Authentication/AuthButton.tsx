@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
-import { AuthService } from '../../services'
+import Nav from 'react-bootstrap/Nav'
+import { AuthService } from '@services'
 // import { TAuthButton } from '../../types'
 // import { useApp } from '../../context'
-import Nav from 'react-bootstrap/Nav'
 
 export const AuthButton = () => {
   const { to, linkText, handleClick, icon } = AuthService().AuthConfigItem

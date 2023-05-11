@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { AuthService } from '../../services'
+import { AuthService } from '../../../services'
 import Nav from 'react-bootstrap/Nav'
 import { useState } from 'react'
 import NavDropdown from 'react-bootstrap/NavDropdown'
@@ -9,7 +9,7 @@ const menu = [
   { name: 'My orders', to: '/orders', private: true },
 ]
 
-export const UserMenu = () => {
+export const Menu = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const { to, linkText, handleClick, icon } = AuthService().AuthConfigItem
 

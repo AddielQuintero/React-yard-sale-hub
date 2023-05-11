@@ -1,11 +1,11 @@
-import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Offcanvas from 'react-bootstrap/Offcanvas'
-import logo from '../../assets/logo_yard_sale.svg'
-import { Cart, CustomLinkList, UserMenu } from './'
 import { NavLink } from 'react-router-dom'
-import { NavigateProps } from '../../types'
+import Container from 'react-bootstrap/Container'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import logo from '@assets/logo_yard_sale.svg'
+import { Cart, LinkList, Menu } from '..'
+import { NavigateProps } from '@types'
 
 export const NavBar = ({ navigation }: { navigation: NavigateProps }) => {
   return (
@@ -17,7 +17,7 @@ export const NavBar = ({ navigation }: { navigation: NavigateProps }) => {
           <NavLink to="/">
             <img src={logo} alt="logo" className="" />
           </NavLink>
-          <Navbar.Offcanvas id="canvasNavbar"  placement="start" aria-labelledby="canvasNavbar">
+          <Navbar.Offcanvas id="canvasNavbar" placement="start" aria-labelledby="canvasNavbar">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="canvasNavbar">
                 <Nav.Link as={NavLink} to="/" eventKey="1">
@@ -27,10 +27,10 @@ export const NavBar = ({ navigation }: { navigation: NavigateProps }) => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-start align-items-md-center flex-grow-1 px-md-5">
-                <CustomLinkList navigation={navigation} className="link__list text-600" />
+                <LinkList navigation={navigation} className="link__list text-600" />
               </Nav>
               <div className="border-top d-md-none my-md-0 my-5"></div>
-              <UserMenu />
+              <Menu />
             </Offcanvas.Body>
           </Navbar.Offcanvas>
 

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { CustomButton, CustomCanvas, OrdersCart } from '..'
-import { useCanvas } from '../../hooks'
+import { CustomButton, CustomCanvas, ItemCart } from '@components'
+import { useCanvas } from '@hooks'
 
 export const Cart = () => {
   const { show, handleShow, handleClose } = useCanvas()
@@ -22,7 +22,7 @@ export const Cart = () => {
       </div>
 
       <CustomCanvas show={show} handleClose={handleClose} title="My Orders">
-        <OrdersCart handleClose={handleClose} />
+        <ItemCart handleClose={handleClose} />
         <div className="cart__subtotal">
           <div className='cart__subtotal-wrapper'>
             <span>Subtotal products</span>
