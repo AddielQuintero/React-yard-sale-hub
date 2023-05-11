@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav'
-import { TLink } from '../../types'
+import { TLink } from '@types'
 // import { useApp } from '../../context'
 
-export const CustomLinkList = ({ navigation, className }: TLink) => {
+export const LinkList = ({ navigation, className }: TLink) => {
   // const app = useApp()
   // console.log(auth?.user)
 

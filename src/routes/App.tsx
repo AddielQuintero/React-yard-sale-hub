@@ -1,9 +1,9 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Clothes, Electronics, Furnitures, Home, Login, NotFound, Orders, Other, Profile, ResetPassword, SignUp, Toys } from './pages'
-import { ClothesDetail } from './pages/Clothes/[id]'
-import { OrdersDetail } from './pages/Orders/[id]'
-import { NavigateProps } from './types'
-import { NavBar } from './components'
+import { Clothes, Electronics, Furnitures, Home, Login, NotFound, Orders, Other, Profile, ResetPassword, SignUp, Toys,} from '@pages'
+import { ClothesDetail } from '../pages/Clothes/[id]'
+import { OrdersDetail } from '../pages/Orders/[id]'
+import { NavigateProps } from '@types'
+import { NavBar } from '@components'
 
 const navigation: NavigateProps = [
   { name: 'All', to: '/', private: false },
@@ -14,7 +14,7 @@ const navigation: NavigateProps = [
   { name: 'Other', to: '/other', private: false },
 ]
 
-export default function App() {
+export const App = () => {
   return (
     <>
       <HashRouter>

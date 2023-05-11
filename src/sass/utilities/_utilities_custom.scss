@@ -43,7 +43,20 @@
 
 $all-colors: map-merge-multiple($grays, $blues, $reds, $yellows, $greens, $teals, $cyans);
 
+$custom-text: (
+  xs: 0.75rem,
+);
+
 $utilities: (
+  //text-{size}
+  'custom-text':
+    (
+      rfs: true,
+      property: font-size,
+      class: text,
+      values: $custom-text,
+    ),
+
   //text-{color}-{level}
   'color':
     map-merge(
@@ -52,6 +65,7 @@ $utilities: (
         values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors)),
       )
     ),
+
   //bg-{color}-{level}
   'background-color':
     (
@@ -85,24 +99,3 @@ $utilities: (
       values: auto default pointer wait text move help not-allowed,
     )
 );
-
-// $font-sizes: (
-//   1: 12rem,
-//   2: 10rem,
-//   3: 7rem,
-//   4: 5rem,
-//   5: 3rem,
-//   6: 2rem,
-// );
-
-// $utilities: map-merge(
-//   $utilities,
-//   (
-//     "font-size": map-merge(
-//       map-get($utilities, "font-size"),
-//       (
-//         values: $font-sizes,
-//       ),
-//     ),
-//   )
-// );

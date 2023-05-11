@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import { CustomButton, CustomCard, CustomInput, OrdersCart } from '../../components'
+import { CustomButton, CustomCard, CustomInput, ItemCart } from '@components'
 
 export const Orders = () => {
   return (
@@ -7,16 +7,16 @@ export const Orders = () => {
       <Row>
         <Col md={8}>
           <h5 className="py-3">Orders</h5>
-          <OrdersCart className="bg-100 rounded-1 p-4" />
+          <ItemCart className="bg-100 rounded-1 p-4" />
         </Col>
         <Col md={4}>
           <CustomCard
             className="rounded-1 mt-4 mt-md-7"
-            classLink="buy-now-button btn btn-success d-flex justify-content-center text-light "
             classHeader="d-none"
             classFooter="d-none"
             title="Total Purchase Summary:"
-            link="Buy Now"
+            hr={true}
+            links={[ { to: '/', label: 'Buy Now', classLink: 'btn btn-success d-flex justify-content-center text-light ' },]}
           >
             <ul className="purchase-summary-list">
               <li className="d-flex justify-content-end gap-5">
