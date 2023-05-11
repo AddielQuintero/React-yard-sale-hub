@@ -1,21 +1,21 @@
-  // custom_property
-  $spacer: 1rem !default;
-  $spacers: (
-    0: 0,
-    1: $spacer * 0.25,
-    2: $spacer * 0.5,
-    3: $spacer * 0.75,
-    4: $spacer,
-    5: $spacer * 1.5,
-    6: $spacer * 3,
-    7: $spacer * 3.5,
-    8: $spacer * 4,
-    9: $spacer * 5,
-    10: $spacer * 6,
-  ) !default;
-  
-  $green: #acdcb4 !default;
-  
-  $custom-colors: (
-    'green': $green,
-  )!default;
+// custom_property
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.5,
+  6: $spacer * 3,
+  7: $spacer * 3.5,
+  8: $spacer * 4,
+  9: $spacer * 5,
+  10: $spacer * 6,
+) !default;
+
+$green: #acdcb4 !default;
+
+$custom-colors: (
+  'green': $green,
+) !default;
