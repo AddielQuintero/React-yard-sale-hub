@@ -4,7 +4,7 @@ import { CustomButton } from './'
 
 export const CustomCanvas = (props: any) => {
   const { show, handleClose, title, children } = props
-  console.log(show)
+  // console.log(show)
 
   const canvaRef = useRef<HTMLDivElement>(null)
 
