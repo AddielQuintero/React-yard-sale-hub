@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import UserService from './User.service'
-import { TAuthConfig, TAuthConfigItem, TPermissions, TUser, DefaultPermissions, verifyPermission} from '../types'
+import { TAuthConfig, TAuthConfigItem, TPermissions, TUser, DefaultPermissions, verifyPermission} from '@types'
 
 export const AuthService = () => {
   const [user, setUser] = useState<TUser | null>(null)

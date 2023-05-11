@@ -1,8 +1,8 @@
 import { FormEventHandler } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import { CustomButton, CustomForm, CustomInput } from '../../components'
-import logo from '../../assets/logo_yard_sale.svg'
+import { CustomButton, CustomForm, CustomInput } from '@components'
+import logo from '@assets/logo_yard_sale.svg'
 
 export const SignUp = () => {
   const navigate = useNavigate()
