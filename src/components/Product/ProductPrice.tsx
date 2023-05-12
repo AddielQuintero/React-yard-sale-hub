@@ -1,12 +1,12 @@
 import { CustomButton, CustomCard, Price } from '@components'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 export const ProductPrice = ({ price }: any) => {
-  const [cart, setCart] = useState([])
+  // const [cart, setCart] = useState([])
 
   const handleAdd = () => {
     console.log('adding cart')
-    setCart([])
+    // setCart([])
   }
 
   return (

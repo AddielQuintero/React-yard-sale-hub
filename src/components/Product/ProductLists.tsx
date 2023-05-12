@@ -1,5 +1,5 @@
 import { CustomCard, Price } from '@components'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { Col } from 'react-bootstrap'
 
 const items = [
@@ -20,7 +20,7 @@ const items = [
 ]
 
 export const ProductList = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const handle = () => {
     //   navigate(`/orders/${item.slug}`, { state: { item } })
