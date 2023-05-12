@@ -3,5 +3,5 @@ export * from './Price';
 export * from './Product';
 export * from './ProductImage';
 export * from './ProductInfo';
-export * from './ProductList';
+export * from './ProductLists';
 export * from './ProductPrice';

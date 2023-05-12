@@ -1,6 +1,14 @@
 import { CustomButton, CustomCard, Price } from '@components'
+// import { useState } from 'react'
 
 export const ProductPrice = ({ price }: any) => {
+  // const [cart, setCart] = useState([])
+
+  const handleAdd = () => {
+    console.log('adding cart')
+    // setCart([])
+  }
+
   return (
     <CustomCard
       className="rounded-1 mb-4"
@@ -23,7 +31,9 @@ export const ProductPrice = ({ price }: any) => {
         <span className="fw-semibold border rounded-1 px-4 py-1">1</span>
       </div>
       <div className="d-grid">
-        <CustomButton className="btn border-success text-green-500 my-3">Add to Cart</CustomButton>
+        <CustomButton onClick={handleAdd} className="btn border-success text-green-500 my-3">
+          Add to Cart
+        </CustomButton>
       </div>
     </CustomCard>
   )
