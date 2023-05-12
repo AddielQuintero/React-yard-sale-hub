@@ -24,7 +24,7 @@ export const ResetPassword = () => {
           </div>
           <div className="text-center mb-3">
             <h5 className="title">Create a new password</h5>
-            <p className="subtitle text-400">Enter a new passwrd for yue account</p>
+            <p className="subtitle text-400">Enter a new password for yue account</p>
           </div>
           <div className="mb-3">
             <CustomInput

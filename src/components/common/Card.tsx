@@ -1,18 +1,22 @@
-import { CradProps } from '@types'
-import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap/Card'
+import { CardProps } from '@types'
 
-export const CustomCard = (props: CradProps) => {
+export const CustomCard = (props: CardProps) => {
   return (
     <Card className={props.className}>
       <Card.Header className={props.classHeader}>{props.header}</Card.Header>
+
       <Card.Img className={props.classImg} variant={props.variant} src={props.src} />
+
       <Card.Body>
         <Card.Title className={props.classTitle}>{props.title}</Card.Title>
+
         {props.hr && <hr />}
-         {/* <hr /> */}
-        {props.children}
+
         <Card.Text className={props.classText}>{props.text}</Card.Text>
+
+        {props.children}
 
         {props.links &&
           props.links.map((item: any) => (

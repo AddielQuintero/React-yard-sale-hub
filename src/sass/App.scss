@@ -1,11 +1,12 @@
 @use '@sass/fonts';
 @use '@sass/components/common/button';
 @use '@sass/components/common/card';
-@use '@sass/components/common/canva';
+@use '@sass/components/common/canvas';
 @use '@sass/components/header/nav_bar';
 @use '@sass/components/header/cart';
 @use '@sass/components/header/orders_cart';
 @use '@sass/components/header/user_menu';
 @use '@sass/components/product/product';
-@use '@sass/utils';
 @use '@sass/pages/login';
+@use '@sass/pages/home';
+@use '@sass/utils';

@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Clothes, Electronics, Furnitures, Home, Login, NotFound, Orders, Other, Profile, ResetPassword, SignUp, Toys,} from '@pages'
+import { Clothes, Electronics, Furniture, Home, Login, NotFound, Orders, Other, Profile, ResetPassword, SignUp, Toys,} from '@pages'
 import { ClothesDetail } from '../pages/Clothes/[id]'
 import { OrdersDetail } from '../pages/Orders/[id]'
 import { NavigateProps } from '@types'
@@ -9,7 +9,7 @@ const navigation: NavigateProps = [
   { name: 'All', to: '/', private: false },
   { name: 'Clothes', to: '/clothes', private: false },
   { name: 'Electronics', to: '/electronics', private: false },
-  { name: 'Furnitures', to: '/furnitures', private: false },
+  { name: 'Furniture', to: '/furniture', private: false },
   { name: 'Toys', to: '/toys', private: false },
   { name: 'Other', to: '/other', private: false },
 ]
@@ -31,7 +31,7 @@ export const App = () => {
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/clothes/:slug" element={<ClothesDetail />} />
           <Route path="/electronics" element={<Electronics />} />
-          <Route path="/furnitures" element={<Furnitures />} />
+          <Route path="/furniture" element={<Furniture />} />
           <Route path="/toys" element={<Toys />} />
           <Route path="/other" element={<Other />} />
           <Route path="*" element={<NotFound />} />

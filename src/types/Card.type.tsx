@@ -4,7 +4,7 @@ export interface TLinks {
   classLink: string
 }
 
-export interface CradProps {
+export interface CardProps {
   className?: string
   classHeader?: string
   classTitle?: string

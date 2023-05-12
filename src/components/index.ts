@@ -6,7 +6,5 @@ export * from './Header/Navigation/LinkList';
 export * from './Header/Navigation/NavBar';
 export * from './Header/User/Menu';
 export * from './Header';
-export * from './Product/Product';
-export * from './Product/productList';
+export * from './Product';
 export * from './common';
-export * from './index';

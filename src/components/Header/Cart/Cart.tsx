@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { CustomButton, CustomCanvas, ItemCart } from '@components'
+import { CustomButton, CustomCanvas, ItemCart, Price } from '@components'
 import { useCanvas } from '@hooks'
 
 export const Cart = () => {
@@ -24,9 +24,9 @@ export const Cart = () => {
       <CustomCanvas show={show} handleClose={handleClose} title="My Orders">
         <ItemCart handleClose={handleClose} />
         <div className="cart__subtotal">
-          <div className='cart__subtotal-wrapper'>
+          <div className="cart__subtotal-wrapper">
             <span>Subtotal products</span>
-            <span className="fw-semibold text-800">U$S 560.00</span>
+            <Price className="fw-semibold text-800" price="560.00" />
           </div>
           <CustomButton className="btn btn-success text-light fw-bolder py-3" onClick={handler}>
             Checkout
