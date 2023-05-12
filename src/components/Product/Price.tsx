@@ -1,3 +1,7 @@
 export const Price = (props: any) => {
-  return <span className={props.className}>U$S {props.price}</span>
+  return (
+    <div className={props.className}>
+      U$S <span className={props.classPrice}>{props.price}</span>
+    </div>
+  )
 }
