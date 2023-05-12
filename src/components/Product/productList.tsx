@@ -11,7 +11,7 @@ export const ProductList = ({ item }: any) => {
     <CustomCard
       className="rounded-1 mb-4"
       classHeader="d-none"
-      classImg="imagen object-fit-contain ratio-1 p-2"
+      classImg="object-fit-contain ratio-1 p-2"
       classText="text-green-800 bg-teal-100 d-inline-block text-xs"
       classFooter="d-none"
       src={item.img}

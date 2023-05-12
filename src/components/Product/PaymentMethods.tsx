@@ -1,10 +1,10 @@
 import { CustomCard } from '@components'
 import visa from '@assets/c-visa.svg'
 import amex from '@assets/c-amex.svg'
-import masterc from '@assets/c-masterc.svg'
+import masterCard from '@assets/c-master.svg'
 import paypal from '@assets/c-paypal.svg'
 import discover from '@assets/discover-logo.svg'
-import dinersclub from '@assets/c-dinersclub.svg'
+import dinersClub from '@assets/c-dinersClub.svg'
 
 export const PaymentMethods = () => {
   return (
@@ -18,13 +18,13 @@ export const PaymentMethods = () => {
           <img src={paypal} alt="" />
         </div>
         <div className="cards__types-container">
-          <img src={masterc} alt="" />
+          <img src={masterCard} alt="" />
         </div>
         <div className="cards__types-container">
           <img src={amex} alt="" />
         </div>
         <div className="cards__types-container">
-          <img src={dinersclub} alt="" />
+          <img src={dinersClub} alt="" />
         </div>
         <div className="cards__types-container">
           <img src={discover} alt="" />

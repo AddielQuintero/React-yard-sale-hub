@@ -1,20 +1,20 @@
 // import Button from 'react-bootstrap/Button'
 import { useEffect, useRef } from 'react'
-import { CustomButton } from './'
+import { CustomButton } from '.'
 
 export const CustomCanvas = (props: any) => {
   const { show, handleClose, title, children } = props
   // console.log(show)
 
-  const canvaRef = useRef<HTMLDivElement>(null)
+  const canvasRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // console.log('toy aqui')
+    // console.log('im here')
     let handler = (e: MouseEvent) => {
-      if (!canvaRef.current?.contains(e.target as Node) && show) {
+      if (!canvasRef.current?.contains(e.target as Node) && show) {
         handleClose()
         // console.log('making handleClose')
-        console.log(canvaRef.current)
+        console.log(canvasRef.current)
       }
     }
 
@@ -30,12 +30,12 @@ export const CustomCanvas = (props: any) => {
 
   return (
     <>
-      <div ref={canvaRef} className={`custom__canva end shadow ${show && 'show'}`}>
-        <div className="custom__canva-header">
-          <div className="custom__canva-title">{title}</div>
-          <CustomButton onClick={handleClose} className="custom__canva-button btn" />
+      <div ref={canvasRef} className={`custom__canvas end shadow ${show && 'show'}`}>
+        <div className="custom__canvas-header">
+          <div className="custom__canvas-title">{title}</div>
+          <CustomButton onClick={handleClose} className="custom__canvas-button btn" />
         </div>
-        <div className="custom__canva-body">{children}</div>
+        <div className="custom__canvas-body">{children}</div>
       </div>
     </>
   )

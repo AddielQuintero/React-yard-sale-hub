@@ -38,7 +38,7 @@ export const Orders = () => {
             </ul>
           </CustomCard>
 
-          <CustomCard className="rounded-1 my-4" classHeader="d-none" classFooter="d-none" title="Promoción:">
+          <CustomCard className="rounded-1 my-4" classHeader="d-none" classFooter="d-none" title="Promotion:">
             <div className="d-flex gap-2 mb-2">
               <CustomInput
                 labelClassName="d-none"
@@ -50,7 +50,7 @@ export const Orders = () => {
             </div>
 
             <div className="bg-white border-top-0 d-flex justify-content-end gap-5">
-              <strong>Total de Descuento:</strong> <strong>U$S 0.00 </strong>
+              <strong>Total Discount:</strong> <strong>U$S 0.00 </strong>
             </div>
           </CustomCard>
         </Col>

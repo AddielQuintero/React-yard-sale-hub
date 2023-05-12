@@ -1,6 +1,6 @@
-import { CardProps } from '@types'
-import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap/Card'
+import { CardProps } from '@types'
 
 export const CustomCard = (props: CardProps) => {
   return (
