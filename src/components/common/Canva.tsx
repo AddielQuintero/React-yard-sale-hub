@@ -13,13 +13,13 @@ export const CustomCanvas = (props: any) => {
     let handler = (e: MouseEvent) => {
       if (!canvaRef.current?.contains(e.target as Node) && show) {
         handleClose()
-        // console.log('hacindo handleclose')
+        // console.log('making handleClose')
         console.log(canvaRef.current)
       }
     }
 
     if (show) {
-      // console.log('esuchando')
+      // console.log('listening')
       document.addEventListener('mousedown', handler)
     }
 

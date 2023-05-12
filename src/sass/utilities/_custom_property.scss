@@ -19,3 +19,22 @@ $green: #acdcb4 !default;
 $custom-colors: (
   'green': $green,
 ) !default;
+
+.text-underline-hover {
+  text-decoration: none;
+}
+
+.text-underline-hover:hover {
+  text-decoration: underline;
+}
+
+.text-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ratio-1 {
+  aspect-ratio: 1;
+}
