@@ -1,26 +1,27 @@
-import { Col, Container, Row } from 'react-bootstrap'
-import { PaymentMethods, ProductImage, ProductInfo, ProductPrice } from '@components'
-import { useApp } from '@context'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
+import { CustomToast, ProductPayment, ProductImage, ProductInfo, ProductOptions } from '@components'
 import { NotFound } from '@pages'
-// import { TProduct } from '@types'
-// import { TProduct } from '@types'
+import { useApp } from '@context'
+import { useToggle } from '@hooks'
+// import { CustomButton, CustomCard, CustomToast, Price } from '@components'
 
 export const ProductDetail = () => {
   const { products, addCart } = useApp()
+  const { show, handleShow, handleClose } = useToggle()
+  const [counter, setCounter] = useState(0)
   const { slug } = useParams()
-  // console.log(slug)
-
   const product = products.find((product) => product.slug === slug)
-  // console.log(product)
+  console.log(product?.weight)
 
   if (!product || !slug) return <NotFound />
-
-  // console.log(cart)
 
   const handleAdd = () => {
     console.log('adding cart')
     addCart(product)
+    handleShow()
+    setCounter(counter + 1)
   }
 
   return (
@@ -42,13 +43,21 @@ export const ProductDetail = () => {
         <Col md={4} lg={3} className="mb-4">
           <Row>
             <Col xs={12}>
-              <ProductPrice price={product.price} handleAdd={handleAdd} />
+              <ProductOptions price={product.price} handleAdd={handleAdd} />
             </Col>
             <Col xs={12}>
-              <PaymentMethods />
+              <ProductPayment />
             </Col>
           </Row>
         </Col>
+
+        <CustomToast
+          counter={counter}
+          setCounter={setCounter}
+          show={show}
+          handleClose={handleClose}
+          text="Product added to cart"
+        />
       </Row>
     </Container>
   )
