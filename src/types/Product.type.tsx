@@ -37,17 +37,31 @@ export interface TProduct extends TIdProduct {
   slug: string
   condition: string
   refund: string
-  weight: string
+  weight: number
   store: string
   availability: string
 }
 
-// const { images, description, price } = product
+export interface ImageProps {
+  src: string
+}
 
+export interface InfoProps {
+  description: string
+  condition: string
+  refund: string
+  weight: number
+  store: string
+  availability: string
+}
 
-// Cart
-export interface CartListProps {
-  cart: TProduct[]
-  className?: string
-  handleClose?: () => void
+export interface OptionsProps {
+  price: number
+  handleAdd: () => void
+}
+
+export interface PriceProps {
+  className: string
+  classPrice?: string
+  price: number
 }
