@@ -1,21 +1,19 @@
 export interface TUser {
   id: number
-  userName: string | null 
-  role: 'admin' | 'editor' | 'student'
+  userName: string | null
+  role: 'admin' | 'customer'
 }
 
 export interface TPermissions {
   add: boolean
   edit: boolean
   deleted: boolean
-  author?: boolean
 }
 
 export const DefaultPermissions: TPermissions = {
   add: false,
   edit: false,
   deleted: false,
-  author: false,
 }
 
 export const permissions: Record<TUser['role'], TPermissions> = {
@@ -24,13 +22,8 @@ export const permissions: Record<TUser['role'], TPermissions> = {
     edit: true,
     deleted: true,
   },
-  editor: {
+  customer: {
     add: false,
-    edit: true,
-    deleted: false,
-  },
-  student: {
-    add: true,
     edit: false,
     deleted: false,
   },
