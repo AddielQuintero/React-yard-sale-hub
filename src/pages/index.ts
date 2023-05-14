@@ -9,5 +9,4 @@ export * from './Profile';
 export * from './ResetPassword';
 export * from './SignUp';
 export * from './Toys';
-export * from './index';
 export * from './noFound';
