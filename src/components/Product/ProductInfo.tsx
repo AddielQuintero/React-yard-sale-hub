@@ -1,34 +1,36 @@
 import { Col, Container, Row } from 'react-bootstrap'
 
-export const ProductInfo = ({ name }: any) => {
+export const ProductInfo = (props: any) => {
+  const { description, condition, refund, weight, store, availability } = props
+  
   return (
     <Container className=" d-flex flex-column justify-content-between">
-      <p className="text-900 ">{name}</p>
+      <p className="text-900 ">{description}</p>
       <Row className="pt-5">
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Availability</span>
           <br />
-          <span>In stock</span>
+          <span>{availability}</span>
         </Col>
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Weight with packaging</span>
           <br />
-          <span>0.11 kg</span>
+          <span>{weight} kg</span>
         </Col>
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Return</span>
           <br />
-          <span>Yes</span>
+          <span>{refund}</span>
         </Col>
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Condition</span>
           <br />
-          <span>New</span>
+          <span>{condition}</span>
         </Col>
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Product of</span>
           <br />
-          <span>Amazon</span>
+          <span>{store}</span>
         </Col>
       </Row>
     </Container>
