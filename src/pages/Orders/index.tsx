@@ -1,13 +1,18 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import { CustomButton, CustomCard, CustomInput, ItemCart } from '@components'
+import { CustomButton, CustomCard, CustomInput, CartList } from '@components'
+import { useApp } from '@context'
 
 export const Orders = () => {
+  const { cart, cartPrice } = useApp()
+  // console.log(cart)
+
+
   return (
     <Container className="">
       <Row>
         <Col md={8}>
           <h5 className="py-3">Orders</h5>
-          <ItemCart className="bg-100 rounded-1 p-4" />
+          <CartList className="bg-100 rounded-1 p-4" cart={cart} />
         </Col>
         <Col md={4}>
           <CustomCard
@@ -16,11 +21,17 @@ export const Orders = () => {
             classFooter="d-none"
             title="Total Purchase Summary:"
             hr={true}
-            links={[ { to: '/', label: 'Buy Now', classLink: 'btn btn-success d-flex justify-content-center text-light ' },]}
+            links={[
+              {
+                to: '',
+                label: 'Buy Now',
+                classLink: 'btn btn-success d-flex justify-content-center text-light ',
+              },
+            ]}
           >
             <ul className="purchase-summary-list">
               <li className="d-flex justify-content-end gap-5">
-                <label>Products:</label> <span>U$S 0.00 </span>
+                <label>Products:</label> <span>U${cartPrice} </span>
               </li>
               <li className="d-flex justify-content-end gap-5">
                 <label>Delivery:</label> <span>U$S 0.00 </span>

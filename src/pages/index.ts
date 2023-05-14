@@ -4,7 +4,7 @@ export * from './Furniture';
 export * from './Home';
 export * from './Login';
 export * from './Orders';
-export * from './Other';
+export * from './Product';
 export * from './Profile';
 export * from './ResetPassword';
 export * from './SignUp';
