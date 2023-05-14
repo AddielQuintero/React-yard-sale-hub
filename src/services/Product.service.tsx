@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { TProduct } from '@types'
 
-const BASE_URL = 'http://localhost:3000/dataStore'
-// const BASE_URL = 'https://json-server-router-dom.herokuapp.com/dataStore'
+// const BASE_URL = 'http://localhost:3000/dataStore'
+const BASE_URL = 'https://json-server-router-dom.herokuapp.com/dataStore'
 
 export const ProductService = () => {
   const [products, setProducts] = useState<TProduct[]>([])
