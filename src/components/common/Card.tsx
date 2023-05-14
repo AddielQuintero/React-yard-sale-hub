@@ -7,7 +7,7 @@ export const CustomCard = (props: CardProps) => {
     <Card className={props.className}>
       <Card.Header className={props.classHeader}>{props.header}</Card.Header>
 
-      <Card.Img className={props.classImg} variant={props.variant} src={props.src} />
+      <Card.Img className={props.classImg} variant={props.variant} src={props.src} alt={props.alt} />
 
       <Card.Body>
         <Card.Title className={props.classTitle}>{props.title}</Card.Title>
