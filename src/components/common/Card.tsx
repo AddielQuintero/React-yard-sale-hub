@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
-import { CardProps } from '@types'
+import { CardLinkProps, CardProps } from '@types'
 
 export const CustomCard = (props: CardProps) => {
   return (
@@ -19,7 +19,7 @@ export const CustomCard = (props: CardProps) => {
         {props.children}
 
         {props.links &&
-          props.links.map((item: any) => (
+          props.links.map((item: CardLinkProps) => (
             <Card.Link as={Link} to={item.to} className={item.classLink} key={item.label}>
               {item.label}
             </Card.Link>

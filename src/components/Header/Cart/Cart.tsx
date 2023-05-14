@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 import { CustomButton, CustomCanvas, CartList, Price } from '@components'
-import { useCanvas } from '@hooks'
+import { useToggle } from '@hooks'
 import { useApp } from '@context'
 
 export const Cart = () => {
-  const { show, handleShow, handleClose } = useCanvas()
+  const { show, handleShow, handleClose } = useToggle()
   const { cart, cartPrice } = useApp()
   const navigate = useNavigate()
 

@@ -84,6 +84,7 @@ $utilities: (
       class: w,
       values: (
         25: 25%,
+        40: 40%,
         50: 50%,
         75: 75%,
         100: 100%,
@@ -92,7 +93,7 @@ $utilities: (
       ),
     ),
 
-  // utilites for Cursor
+  // utilities for Cursor
   'cursor':
     (
       property: cursor,
