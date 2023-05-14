@@ -1,6 +1,6 @@
 import { FormEventHandler, useRef } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { useNavigate, useLocation, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { CustomButton, CustomForm, CustomInput } from '@components'
 import logo from '@assets/logo_yard_sale.svg'
 
