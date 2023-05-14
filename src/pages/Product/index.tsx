@@ -1,11 +1,10 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { Product } from '@components'
+import { useNavigate } from 'react-router-dom'
+import { ProductDetail } from '@components'
 
-export const OrdersDetail = () => {
-  const { state } = useLocation()
+export const Product = () => {
   const navigate = useNavigate()
-  console.log(state)
+
   return (
     <Container>
       <Row>
@@ -16,7 +15,7 @@ export const OrdersDetail = () => {
             </span>
             <h5 className="py-3 mb-0">OrdersDetail</h5>
           </div>
-          <Product className="" state={state} />
+          <ProductDetail />
         </Col>
       </Row>
     </Container>

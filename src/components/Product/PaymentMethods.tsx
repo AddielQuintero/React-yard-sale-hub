@@ -4,7 +4,6 @@ import amex from '@assets/c-amex.svg'
 import masterCard from '@assets/c-master.svg'
 import paypal from '@assets/c-paypal.svg'
 import discover from '@assets/discover-logo.svg'
-// import dinersClub from '@assets/c-dinersClub.svg'
 
 export const PaymentMethods = () => {
   return (
@@ -23,9 +22,6 @@ export const PaymentMethods = () => {
         <div className="cards__types-container">
           <img src={amex} alt="" />
         </div>
-        {/* <div className="cards__types-container">
-          <img src={dinersClub} alt="" />
-        </div> */}
         <div className="cards__types-container">
           <img src={discover} alt="" />
         </div>

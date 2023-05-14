@@ -19,5 +19,6 @@ export interface CardProps {
   text?: string
   footer?: string
   src?: string
+  alt?: string
   hr?: boolean
 }

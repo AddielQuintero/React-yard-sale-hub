@@ -1,13 +1,8 @@
 import { CustomButton, CustomCard, Price } from '@components'
 // import { useState } from 'react'
 
-export const ProductPrice = ({ price }: any) => {
+export const ProductPrice = ({ price, handleAdd }: any) => {
   // const [cart, setCart] = useState([])
-
-  const handleAdd = () => {
-    console.log('adding cart')
-    // setCart([])
-  }
 
   return (
     <CustomCard
@@ -19,7 +14,7 @@ export const ProductPrice = ({ price }: any) => {
       hr={true}
       links={[
         {
-          to: '/orders',
+          to: '',
           label: 'Buy Now',
           classLink: 'btn btn-success d-flex justify-content-center text-light ',
         },
