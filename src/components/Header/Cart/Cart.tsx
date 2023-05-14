@@ -1,15 +1,19 @@
 import { useNavigate } from 'react-router-dom'
-import { CustomButton, CustomCanvas, ItemCart, Price } from '@components'
+import { CustomButton, CustomCanvas, CartList, Price } from '@components'
 import { useCanvas } from '@hooks'
+import { useApp } from '@context'
 
 export const Cart = () => {
   const { show, handleShow, handleClose } = useCanvas()
+  const { cart, cartPrice } = useApp()
   const navigate = useNavigate()
 
   const handler = () => {
     handleClose()
     navigate('/orders')
   }
+
+  console.log(`Cart: ${cartPrice}`)
 
   return (
     <div className="cart">
@@ -18,15 +22,15 @@ export const Cart = () => {
         className="cart__shopping d-flex justify-content-center align-items-center cursor-pointer ms-3"
       >
         <i className="bi bi-cart2 fs-5 d-flex"></i>
-        <div className="cart__shopping-count small bg-green-500">2</div>
+        <div className="cart__shopping-count small bg-green-500">{cart.length}</div>
       </div>
 
       <CustomCanvas show={show} handleClose={handleClose} title="My Orders">
-        <ItemCart handleClose={handleClose} />
+        <CartList cart={cart} handleClose={handleClose} />
         <div className="cart__subtotal">
           <div className="cart__subtotal-wrapper">
             <span>Subtotal products</span>
-            <Price className="fw-semibold text-800" price="560.00" />
+            <Price className="fw-semibold text-800" price={cartPrice} />
           </div>
           <CustomButton className="btn btn-success text-light fw-bolder py-3" onClick={handler}>
             Checkout

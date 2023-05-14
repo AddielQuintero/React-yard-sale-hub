@@ -1,25 +1,25 @@
-import { Price } from '@components'
 import { useNavigate } from 'react-router-dom'
+import { Price } from '@components'
 
-export const Item = (props: any) => {
-  const { item, handleClose } = props
+export const CartItem = (props: any) => {
+  const { product, handleClose } = props
   const navigate = useNavigate()
 
   const handle = () => {
     handleClose && handleClose()
-    navigate(`/orders/${item.slug}`, { state: { item } })
+    navigate(`/product/${product.slug}`)
   }
 
   return (
     <>
       <li className="order__container-item">
         <figure>
-          <img src={item.img} alt="" />
+          <img src={product.images[0]} alt="" />
         </figure>
 
         <div className=" d-flex flex-column justify-content-between">
           <span onClick={handle} className="text-900 text-underline-hover cursor-pointer text-clamp">
-            {item.name}
+            {product.description}
           </span>
           <span className="fw-semibold">1x</span>
         </div>
@@ -28,7 +28,7 @@ export const Item = (props: any) => {
           <span className="cursor-pointer">
             <i className="bi bi-trash fs-5 "></i>
           </span>
-          <Price className="text-600" price={item.price} />
+          <Price className="text-600" price={product.price} />
         </div>
       </li>
     </>
