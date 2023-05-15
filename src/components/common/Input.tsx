@@ -1,10 +1,7 @@
-type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
-  labelText?: string
-  labelClassName?: string
-}
+import { InputProps } from '@types'
 
 export const CustomInput = (props: InputProps): JSX.Element => {
-  // console.log(`dentro del input: ${props.value}`)
+  // console.log(`inside of the input: ${props.value}`)
   return (
     <>
       <label htmlFor={props.id} className={props.labelClassName}>

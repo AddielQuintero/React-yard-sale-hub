@@ -1,4 +1,6 @@
-export const ProductImage = ({ src }: any) => {
+import { ImageProps } from '@types'
+
+export const ProductImage = ({ src }: ImageProps) => {
   return (
     <figure>
       <img src={src} alt="" />

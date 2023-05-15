@@ -1,6 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap'
+import { InfoProps } from '@types'
 
-export const ProductInfo = (props: any) => {
+export const ProductInfo = (props: InfoProps) => {
   const { description, condition, refund, weight, store, availability } = props
   
   return (

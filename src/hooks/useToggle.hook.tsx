@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-export const useCanvas = () => {
-  const [show, setShow] = useState(false)
+export const useToggle = () => {
+  const [show, setShow] = useState<boolean>(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)

@@ -5,7 +5,7 @@ import masterCard from '@assets/c-master.svg'
 import paypal from '@assets/c-paypal.svg'
 import discover from '@assets/discover-logo.svg'
 
-export const PaymentMethods = () => {
+export const ProductPayment = () => {
   return (
     <CustomCard classHeader="d-none" classFooter="d-none" title="Payment methods">
       <span className="text-500 small">Credit and debit cards or via PayPal.</span>

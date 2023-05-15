@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { Price } from '@components'
+import { CartItemProps } from '@types'
 
-export const CartItem = (props: any) => {
-  const { product, handleClose } = props
+export const CartItem = ({ product, handleClose }: CartItemProps) => {
   const navigate = useNavigate()
 
   const handle = () => {

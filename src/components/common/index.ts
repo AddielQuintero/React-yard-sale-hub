@@ -3,3 +3,4 @@ export * from './Canvas';
 export * from './Card';
 export * from './Form';
 export * from './Input';
+export * from './Toast';

@@ -1,6 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Clothes, Electronics, Furniture, Home, Login, NotFound, Orders, Product, Profile, ResetPassword, SignUp, Toys,} from '@pages'
-import { ClothesDetail } from '../pages/Clothes/[id]'
 import { NavigateProps } from '@types'
 import { NavBar } from '@components'
 import { AppProvider } from '@context'
@@ -28,8 +27,7 @@ export const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/product/:slug" element={<Product />} />
-            <Route path="/clothes" element={<Clothes />} />
-            <Route path="/clothes/:slug" element={<ClothesDetail />} />
+            <Route path="/clothes" element={<Clothes />} />          
             <Route path="/electronics" element={<Electronics />} />
             <Route path="/furniture" element={<Furniture />} />
             <Route path="/toys" element={<Toys />} />

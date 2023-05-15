@@ -1,9 +1,9 @@
 // import Button from 'react-bootstrap/Button'
 import { useEffect, useRef } from 'react'
 import { CustomButton } from '.'
+import { CanvasProps } from '@types'
 
-export const CustomCanvas = (props: any) => {
-  const { show, handleClose, title, children } = props
+export const CustomCanvas = ({ show, handleClose, title, children }: CanvasProps) => {
   // console.log(show)
 
   const canvasRef = useRef<HTMLDivElement>(null)
