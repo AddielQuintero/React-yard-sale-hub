@@ -16,7 +16,7 @@ export const ProductService = () => {
       .catch((error) => {
         console.error('Error fetching products:', error)
       })
-    console.log('useEffect')
+    console.log('get into useEffect')
   }, [setProducts])
 
   return { products }
