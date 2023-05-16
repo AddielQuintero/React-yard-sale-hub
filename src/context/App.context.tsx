@@ -6,13 +6,16 @@ const AppContext = createContext<TAppContext>(DefaultContext)
 
 const AppProvider = ({ children }: AppChildrenProps) => {
   const { products } = ProductService()
-  const { cart, cartPrice, addCart } = CartService()
+  const { cart, cartPrice, addCart, deleteCart, taxes, totalPrice } = CartService()
 
   const app = {
     products,
     cart,
     cartPrice,
+    taxes,
+    totalPrice,
     addCart,
+    deleteCart,
   }
 
   //   console.log(products)

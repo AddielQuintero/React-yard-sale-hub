@@ -44,6 +44,7 @@
 $all-colors: map-merge-multiple($grays, $blues, $reds, $yellows, $greens, $teals, $cyans);
 
 $custom-text: (
+  xxs: 0.625rem,
   xs: 0.75rem,
 );
 
@@ -65,7 +66,6 @@ $utilities: (
         values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors)),
       )
     ),
-
   //bg-{color}-{level}
   'background-color':
     (
@@ -85,6 +85,7 @@ $utilities: (
       values: (
         25: 25%,
         40: 40%,
+        45: 45%,
         50: 50%,
         75: 75%,
         100: 100%,

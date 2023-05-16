@@ -9,7 +9,7 @@ export const CustomCard = (props: CardProps) => {
 
       <Card.Img className={props.classImg} variant={props.variant} src={props.src} alt={props.alt} />
 
-      <Card.Body>
+      <Card.Body className={props.classBody}>
         <Card.Title className={props.classTitle}>{props.title}</Card.Title>
 
         {props.hr && <hr />}

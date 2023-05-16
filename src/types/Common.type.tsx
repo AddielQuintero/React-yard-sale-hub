@@ -17,6 +17,7 @@ export interface CardProps {
   className?: string
   classHeader?: string
   classTitle?: string
+  classBody?: string
   classImg?: string
   classText?: string
   classFooter?: string

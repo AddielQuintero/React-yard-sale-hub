@@ -12,20 +12,26 @@ export interface TAppContext {
   // AuthConfigItem: TAuthConfigItem
   cart: TProduct[]
   cartPrice: number
+  taxes: number
+  totalPrice: number
   products: TProduct[]
   addCart: (newProduct: TProduct) => void
+  deleteCart: (productId: number) => void
   // login: (userName: string) => void
   // logout: () => void
 }
 
 export const DefaultContext = {
   // user: null,
-  cart: [],
-  cartPrice: 0.00,
-  products: [],
   // permissions: DefaultPermissions,
   // AuthConfigItem: DefaultAuthConfigItem,
+  cart: [],
+  cartPrice: 0.0,
+  taxes: 0.0,
+  totalPrice: 0.0,
+  products: [],
+  addCart: () => {},
+  deleteCart: () => {},
   // login: () => {},
   // logout: () => {},
-  addCart: () => {},
 }

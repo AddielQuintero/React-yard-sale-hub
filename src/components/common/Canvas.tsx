@@ -14,7 +14,7 @@ export const CustomCanvas = ({ show, handleClose, title, children }: CanvasProps
       if (!canvasRef.current?.contains(e.target as Node) && show) {
         handleClose()
         // console.log('making handleClose')
-        console.log(canvasRef.current)
+        // console.log(canvasRef.current)
       }
     }
 
@@ -30,12 +30,12 @@ export const CustomCanvas = ({ show, handleClose, title, children }: CanvasProps
 
   return (
     <>
-      <div ref={canvasRef} className={`custom__canvas end shadow ${show && 'show'}`}>
-        <div className="custom__canvas-header">
-          <div className="custom__canvas-title">{title}</div>
-          <CustomButton onClick={handleClose} className="custom__canvas-button btn" />
+      <div ref={canvasRef} className={`canvas end shadow ${show && 'show'}`}>
+        <div className="canvas__header">
+          <div className="canvas__title">{title}</div>
+          <CustomButton onClick={handleClose} className="canvas__button btn" />
         </div>
-        <div className="custom__canvas-body">{children}</div>
+        <div className="canvas__body">{children}</div>
       </div>
     </>
   )

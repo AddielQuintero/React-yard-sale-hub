@@ -5,7 +5,7 @@ export const ProductOptions = ({ price, handleAdd }: OptionsProps) => {
   return (
     <>
       <CustomCard
-        className="rounded-1 mb-4"
+        className="border-0 shadow mb-4"
         classHeader="d-none"
         classFooter="d-none"
         classTitle="text-green-700 bg-teal-100 d-inline-block text-xs"

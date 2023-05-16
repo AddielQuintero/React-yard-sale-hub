@@ -8,12 +8,12 @@ export const Cart = () => {
   const { cart, cartPrice } = useApp()
   const navigate = useNavigate()
 
-  const handler = () => {
+  const handlerCanvas = () => {
     handleClose()
     navigate('/orders')
   }
 
-  console.log(`Cart: ${cartPrice}`)
+  // console.log(`Cart: ${cartPrice}`)
 
   return (
     <div className="cart">
@@ -22,7 +22,7 @@ export const Cart = () => {
         className="cart__shopping d-flex justify-content-center align-items-center cursor-pointer ms-3"
       >
         <i className="bi bi-cart2 fs-5 d-flex"></i>
-        <div className="cart__shopping-count small bg-green-500">{cart.length}</div>
+        <div className="cart__count text-xs bg-green-500">{cart.length}</div>
       </div>
 
       <CustomCanvas show={show} handleClose={handleClose} title="My Orders">
@@ -32,7 +32,7 @@ export const Cart = () => {
             <span>Subtotal products</span>
             <Price className="fw-semibold text-800" price={cartPrice} />
           </div>
-          <CustomButton className="btn btn-success text-light fw-bolder py-3" onClick={handler}>
+          <CustomButton className="btn btn-success text-light fw-bolder py-3" onClick={handlerCanvas}>
             Checkout
           </CustomButton>
         </div>
