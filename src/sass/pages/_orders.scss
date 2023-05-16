@@ -1,0 +1,13 @@
+.orders {
+  &__summary span {
+    width: 20%;
+
+    @media (min-width: 767.98px) {
+      width: 45%;
+    }
+    
+    @media (min-width: 991.98px) {
+      width: 35%;
+    }
+  }
+}
