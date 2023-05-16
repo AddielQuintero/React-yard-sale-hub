@@ -7,23 +7,28 @@ import discover from '@assets/discover-logo.svg'
 
 export const ProductPayment = () => {
   return (
-    <CustomCard classHeader="d-none" classFooter="d-none" title="Payment methods">
+    <CustomCard
+      className="border-0 shadow"
+      classHeader="d-none"
+      classFooter="d-none"
+      title="Payment methods"
+    >
       <span className="text-500 small">Credit and debit cards or via PayPal.</span>
-      <div className="cards__types pt-2">
-        <div className="cards__types-container">
-          <img src={visa} alt="" />
+      <div className="card__payment pt-2">
+        <div className="card__content">
+          <img src={visa} alt="Visa" />
         </div>
-        <div className="cards__types-container">
-          <img src={paypal} alt="" />
+        <div className="card__content">
+          <img src={paypal} alt="Paypal" />
         </div>
-        <div className="cards__types-container">
-          <img src={masterCard} alt="" />
+        <div className="card__content">
+          <img src={masterCard} alt="Master Card" />
         </div>
-        <div className="cards__types-container">
-          <img src={amex} alt="" />
+        <div className="card__content">
+          <img src={amex} alt="Amex" />
         </div>
-        <div className="cards__types-container">
-          <img src={discover} alt="" />
+        <div className="card__content">
+          <img src={discover} alt="Discover" />
         </div>
       </div>
     </CustomCard>

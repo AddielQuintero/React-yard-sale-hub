@@ -5,7 +5,6 @@ import { CustomToast, ProductPayment, ProductImage, ProductInfo, ProductOptions 
 import { NotFound } from '@pages'
 import { useApp } from '@context'
 import { useToggle } from '@hooks'
-// import { CustomButton, CustomCard, CustomToast, Price } from '@components'
 
 export const ProductDetail = () => {
   const { products, addCart } = useApp()
@@ -13,12 +12,11 @@ export const ProductDetail = () => {
   const [counter, setCounter] = useState(0)
   const { slug } = useParams()
   const product = products.find((product) => product.slug === slug)
-  console.log(product?.weight)
 
   if (!product || !slug) return <NotFound />
 
   const handleAdd = () => {
-    console.log('adding cart')
+    // console.log('adding cart')
     addCart(product)
     handleShow()
     setCounter(counter + 1)

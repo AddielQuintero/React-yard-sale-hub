@@ -6,7 +6,7 @@
 // @import "bootstrap/scss/utilities";
 
 // custom_property
-@import '@sass/utilities/custom_property';
+@import '@sass/utilities/custom__property';
 
 // bootstrap
 @import 'bootstrap/scss/bootstrap.scss';
@@ -15,6 +15,6 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // utilities_customs
-@import '@sass/utilities/utilities_custom';
+@import '@sass/utilities/utilities__custom';
 
 @import 'bootstrap/scss/utilities/api';
