@@ -1,13 +1,15 @@
 .orders {
-  &__summary span {
-    width: 20%;
+  &__summary span,
+  &__summary strong:last-child,
+  &__discount strong:last-child {
+    width: 29%;
 
     @media (min-width: 767.98px) {
-      width: 45%;
+      width: 49%;
     }
-    
+
     @media (min-width: 991.98px) {
-      width: 35%;
+      width: 34%;
     }
   }
 }

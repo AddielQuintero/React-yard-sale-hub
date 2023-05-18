@@ -58,7 +58,7 @@ export const Login = () => {
           </CustomForm>
 
           <p className="forgot-password text-right">
-            <NavLink to="/resetPassword" className="text-green-400 text-decoration-none">
+            <NavLink to="/resetPassword" className="text-red-400 text-decoration-none">
               Forgot password?
             </NavLink>
           </p>
