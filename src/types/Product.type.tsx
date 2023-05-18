@@ -12,12 +12,13 @@ export interface TSelectCategory {
   name: string
 }
 
-export const categories: TSelectCategory[] = [
-  { id: 1, name: 'Clothes' },
-  { id: 2, name: 'Electronics' },
-  { id: 3, name: 'Furniture' },
-  { id: 4, name: 'Shoes' },
-  { id: 5, name: 'Others' },
+export const Categories: TSelectCategory[] = [
+  { id: 1, name: 'All' },
+  { id: 2, name: 'Clothes' },
+  { id: 3, name: 'Electronics' },
+  { id: 4, name: 'Furniture' },
+  { id: 5, name: 'Shoes' },
+  { id: 6, name: 'Others' },
 ]
 
 // Product
@@ -40,14 +41,20 @@ export interface TProduct extends TIdProduct {
   weight: number
   store: string
   availability: string
+  rate: number
+  reviews: number
+  stock: number
 }
 
 export interface ImageProps {
   src: string
+  alt: string
 }
 
 export interface InfoProps {
   description: string
+  reviews: number
+  rate: number
   condition: string
   refund: string
   weight: number
@@ -57,6 +64,7 @@ export interface InfoProps {
 
 export interface OptionsProps {
   price: number
+  stock: number
   handleAdd: () => void
 }
 
@@ -64,4 +72,13 @@ export interface PriceProps {
   className: string
   classPrice?: string
   price: number
+}
+
+export interface TFilters {
+  category: string
+  minPrice: number
+}
+export const DefaultFilters = {
+  category: 'All',
+  minPrice: 0,
 }

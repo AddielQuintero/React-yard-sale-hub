@@ -5,7 +5,7 @@ import { useApp } from '@context'
 
 export const Cart = () => {
   const { show, handleShow, handleClose } = useToggle()
-  const { cart, cartPrice } = useApp()
+  const { cart, countCartItems, cartPrice } = useApp()
   const navigate = useNavigate()
 
   const handlerCanvas = () => {
@@ -13,7 +13,7 @@ export const Cart = () => {
     navigate('/orders')
   }
 
-  // console.log(`Cart: ${cartPrice}`)
+  // console.log(`Cart: ${countCartItems}`)
 
   return (
     <div className="cart">
@@ -22,11 +22,11 @@ export const Cart = () => {
         className="cart__shopping d-flex justify-content-center align-items-center cursor-pointer ms-3"
       >
         <i className="bi bi-cart2 fs-5 d-flex"></i>
-        <div className="cart__count text-xs bg-green-500">{cart.length}</div>
+        <div className="cart__count text-xs bg-green-500">{countCartItems}</div>
       </div>
 
       <CustomCanvas show={show} handleClose={handleClose} title="My Orders">
-        <CartList cart={cart} handleClose={handleClose} />
+        <CartList showAddCart={false} cart={cart} handleClose={handleClose} />
         <div className="cart__subtotal">
           <div className="cart__subtotal-wrapper">
             <span>Subtotal products</span>

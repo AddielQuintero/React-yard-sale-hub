@@ -11,7 +11,7 @@ export const Orders = () => {
       <Row>
         <Col md={8}>
           <h5 className="py-3">Orders</h5>
-          <CartList className="bg-100 rounded-1 p-4" cart={cart} />
+          <CartList className="bg-100 rounded-1 p-4" cart={cart} showAddCart={true} />
         </Col>
         <Col md={4}>
           <CustomCard
@@ -30,8 +30,8 @@ export const Orders = () => {
               <CustomButton className="btn border-success  text-green-500">Apply</CustomButton>
             </div>
 
-            <div className="bg-white border-top-0 d-flex justify-content-end gap-5">
-              <strong>Total Discount:</strong> <strong className="w-40 text-end">U$S 0.00 </strong>
+            <div className="orders__discount bg-white border-top-0 d-flex justify-content-end gap-5">
+              <strong>Total Discount:</strong> <strong className=" text-end">U$S 0.00 </strong>
             </div>
           </CustomCard>
 
