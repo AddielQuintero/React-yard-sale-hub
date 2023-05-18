@@ -3,7 +3,7 @@ import Toast from 'react-bootstrap/Toast'
 import ToastContainer from 'react-bootstrap/ToastContainer'
 import { ToastProps } from '@types'
 
-export const CustomToast = ({ counter, setCounter, show, handleClose, text }: ToastProps) => {
+export const CustomToast = ({ className, counter, setCounter, show, handleClose, text }: ToastProps) => {
   const onClose = () => {
     handleClose(false)
     setCounter(0)
@@ -24,7 +24,7 @@ export const CustomToast = ({ counter, setCounter, show, handleClose, text }: To
             >
               <Toast.Header
                 closeVariant="white"
-                className="bg-green-500 text-white py-3 border-bottom-0 rounded-1"
+                className={`${className} text-white py-3 border-bottom-0 rounded-1`}
               >
                 <strong className="me-auto">{text}</strong>
               </Toast.Header>
