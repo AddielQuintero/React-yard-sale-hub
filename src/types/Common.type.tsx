@@ -1,3 +1,5 @@
+import { Ref } from 'react'
+
 // Canvas
 export interface CanvasProps {
   show: boolean
@@ -39,11 +41,27 @@ export type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   labelClassName?: string
 }
 
+// Button
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
+
 //Toast
 export interface ToastProps {
+  className: string
   counter: number
   setCounter: (value: number) => void
   show: boolean
   handleClose: (value: boolean) => void
   text: string
+}
+
+// Img
+export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+  imgRef: Ref<HTMLImageElement>
+}
+
+// LazyImage
+export interface LazyImageProps {
+  src?: string 
+  className?: string
+  alt?: string
 }

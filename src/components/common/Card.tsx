@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
+import { LazyImage } from '@components'
 import { CardLinkProps, CardProps } from '@types'
 
 export const CustomCard = (props: CardProps) => {
@@ -7,7 +8,8 @@ export const CustomCard = (props: CardProps) => {
     <Card className={props.className}>
       <Card.Header className={props.classHeader}>{props.header}</Card.Header>
 
-      <Card.Img className={props.classImg} variant={props.variant} src={props.src} alt={props.alt} />
+      {/* <Card.Img className={props.classImg} variant={props.variant} src={props.src} alt={props.alt} /> */}
+      <LazyImage className={props.classImg} src={props.src} alt={props.alt} />
 
       <Card.Body className={props.classBody}>
         <Card.Title className={props.classTitle}>{props.title}</Card.Title>
