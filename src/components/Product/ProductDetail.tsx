@@ -26,11 +26,13 @@ export const ProductDetail = () => {
     <Container className="product">
       <Row>
         <Col md={4} lg={3} className="mb-4">
-          <ProductImage src={product.images[0]} />
+          <ProductImage src={product.images[0]} alt={product.title} />
         </Col>
         <Col md={4} lg={6} className="mb-4">
           <ProductInfo
             description={product.description}
+            rate={product.rate}
+            reviews={product.reviews}
             condition={product.condition}
             refund={product.refund}
             weight={product.weight}
@@ -41,7 +43,7 @@ export const ProductDetail = () => {
         <Col md={4} lg={3} className="mb-4">
           <Row>
             <Col xs={12}>
-              <ProductOptions price={product.price} handleAdd={handleAdd} />
+              <ProductOptions stock={product.stock} price={product.price} handleAdd={handleAdd} />
             </Col>
             <Col xs={12}>
               <ProductPayment />
@@ -50,6 +52,7 @@ export const ProductDetail = () => {
         </Col>
 
         <CustomToast
+          className="bg-800"
           counter={counter}
           setCounter={setCounter}
           show={show}

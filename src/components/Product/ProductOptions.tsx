@@ -1,7 +1,7 @@
 import { CustomButton, CustomCard, Price } from '@components'
 import { OptionsProps } from '@types'
 
-export const ProductOptions = ({ price, handleAdd }: OptionsProps) => {
+export const ProductOptions = ({ price, stock, handleAdd }: OptionsProps) => {
   return (
     <>
       <CustomCard
@@ -21,8 +21,8 @@ export const ProductOptions = ({ price, handleAdd }: OptionsProps) => {
       >
         <Price className="text-600" price={price} />
         <div className="d-flex align-items-center gap-3 pt-3 pb-4">
-          <span>Amount</span>
-          <span className="fw-semibold border rounded-1 px-4 py-1">1</span>
+          <span>Available</span>
+          <span className="fw-semibold border rounded-1 px-4 py-1">{stock}</span>
         </div>
         <div className="d-grid">
           <CustomButton onClick={handleAdd} className="btn border-success text-green-500 my-3">
