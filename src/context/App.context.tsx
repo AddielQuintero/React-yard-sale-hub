@@ -5,15 +5,19 @@ import { createContext, useContext } from 'react'
 const AppContext = createContext<TAppContext>(DefaultContext)
 
 const AppProvider = ({ children }: AppChildrenProps) => {
-  const { products } = ProductService()
-  const { cart, cartPrice, addCart, deleteCart, taxes, totalPrice } = CartService()
+  const { products, productFiltered, filters, setFilters } = ProductService()
+  const { cart, countCartItems, cartPrice, taxes, totalPrice, addCart, deleteCart } = CartService()
 
   const app = {
     products,
+    productFiltered,
+    filters,
     cart,
+    countCartItems,
     cartPrice,
     taxes,
     totalPrice,
+    setFilters,
     addCart,
     deleteCart,
   }

@@ -1,3 +1,4 @@
-export * from './Header';
-export * from './Product';
-export * from './common';
+export * from './Header'
+export * from './LazyImage'
+export * from './Product'
+export * from './common'
