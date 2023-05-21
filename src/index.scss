@@ -5,11 +5,16 @@
 // @import "bootstrap/scss/mixins";
 // @import "bootstrap/scss/utilities";
 
+
 // custom_property
 @import '@sass/utilities/custom__property';
 
+// react-bootstrap-range-slider
+@import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider';
+
 // bootstrap
-@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap';
+
 
 // bootstrap-icons
 @import 'bootstrap-icons/font/bootstrap-icons.css';

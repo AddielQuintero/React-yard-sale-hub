@@ -1,4 +1,5 @@
-import { Ref } from 'react'
+import { TSelectCategory } from '@types'
+import { Ref, ChangeEventHandler } from 'react'
 
 // Canvas
 export interface CanvasProps {
@@ -61,7 +62,27 @@ export type ImgProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 
 // LazyImage
 export interface LazyImageProps {
-  src?: string 
+  src?: string
   className?: string
   alt?: string
+}
+
+// Range
+export interface RangeProps {
+  id: string
+  price: number
+  min: number
+  max: number
+  variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'
+  tooltip?: 'auto' | 'on' | 'off'
+  onChange: ChangeEventHandler<HTMLInputElement>
+}
+
+// Select
+export interface SelectProps {
+  id: string
+  value?: TSelectCategory
+  options: TSelectCategory[]
+  label: string
+  onChange?: any
 }

@@ -1,3 +1,2 @@
-export * from './Filter';
-export * from './LinkList';
-export * from './NavBar';
+export * from './LinkList'
+export * from './NavBar'

@@ -14,7 +14,7 @@ export const ProductList = () => {
     <>
       <Filter />
       {productFiltered.map((product: TProduct) => (
-        <Col md={3} lg={2} key={product.id}>
+        <Col xs={6} md={3} lg={2} key={product.id}>
           <CustomCard
             className="rounded-1 mb-4 border-0"
             classImg="object-fit-contain ratio-1 m-2 rounded-4"

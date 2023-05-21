@@ -20,9 +20,9 @@ export const Login = () => {
   }
 
   return (
-    <Container className="d-flex align-items-center vh-100">
-      <Row className=" flex-grow-1">
-        <Col md={6} lg={4} className="mx-auto w-24">
+    <Container className="login">
+      <Row>
+        <Col className="w-24">
           <div className="d-flex justify-content-center mb-5">
             <img src={logo} alt="logo" className=" " width={150} />
           </div>

@@ -8,17 +8,17 @@ export interface TCategory {
 }
 
 export interface TSelectCategory {
-  id: number
-  name: string
+  value: string
+  label: string
 }
 
-export const Categories: TSelectCategory[] = [
-  { id: 1, name: 'All' },
-  { id: 2, name: 'Clothes' },
-  { id: 3, name: 'Electronics' },
-  { id: 4, name: 'Furniture' },
-  { id: 5, name: 'Shoes' },
-  { id: 6, name: 'Others' },
+export const Category: TSelectCategory[] = [
+  { value: 'All', label: 'All' },
+  { value: 'Clothes', label: 'Clothes' },
+  { value: 'Electronics', label: 'Electronics' },
+  { value: 'Furniture', label: 'Furniture' },
+  { value: 'Shoes', label: 'Shoes' },
+  { value: 'Others', label: 'Others' },
 ]
 
 // Product

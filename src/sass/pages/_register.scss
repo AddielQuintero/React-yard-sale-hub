@@ -1,6 +1,6 @@
-.login {
+.login, .signUp, .resetPassword {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 70px);
+  height: 91vh;
 }
