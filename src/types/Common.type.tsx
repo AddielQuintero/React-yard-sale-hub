@@ -1,6 +1,5 @@
 import { TSelectCategory } from '@types'
 import { Ref, ChangeEventHandler } from 'react'
-import { ActionMeta, OnChangeValue } from 'react-select'
 
 // Canvas
 export interface CanvasProps {

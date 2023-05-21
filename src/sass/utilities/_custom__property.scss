@@ -14,11 +14,15 @@ $spacers: (
   10: $spacer * 6,
 ) !default;
 
-$green: #98D8AA !default;
+$green: #98d8aa !default;
 
 $custom-colors: (
   'green': $green,
 ) !default;
+
+$theme-colors: (
+  'success': $green,
+);
 
 .text-underline-hover {
   text-decoration: none;

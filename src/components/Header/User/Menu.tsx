@@ -41,7 +41,7 @@ export const Menu = () => {
                 {link.name}
               </NavDropdown.Item>
             ))}
-            <NavDropdown.Divider className='mx-md-4'/>
+            <NavDropdown.Divider className="mx-md-4" />
             <NavDropdown.Item
               as={NavLink}
               to={to}
