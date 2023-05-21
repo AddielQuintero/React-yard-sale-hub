@@ -5,7 +5,7 @@ export interface TCart {
   discountPercentage: number
   description: string
   thumbnail: string
-  images: string[]
+  images?: string[]
   category: string
   slug: string
   condition: string
