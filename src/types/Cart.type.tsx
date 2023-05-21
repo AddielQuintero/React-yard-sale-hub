@@ -1,22 +1,19 @@
-import { TCategory } from '.'
-
 export interface TCart {
   id: number
   title: string
   price: number
+  discountPercentage: number
   description: string
+  thumbnail: string
   images: string[]
-  category: TCategory
-  creationAt: Date
-  updatedAt?: Date
-  author: string
+  category: string
   slug: string
   condition: string
   refund: string
   weight: number
-  store: string
+  brand: string
   availability: string
-  rate: number
+  rating: number
   reviews: number
   quantity: number
   stock: number
@@ -37,7 +34,7 @@ export interface CartItemProps {
 }
 
 export interface RatingProps {
-  rate: number
+  rating: number
   reviews: number
   text?: string
   className?: string

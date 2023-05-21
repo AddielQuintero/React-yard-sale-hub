@@ -17,13 +17,13 @@ export const ProductList = () => {
         <Col xs={6} md={3} lg={2} key={product.id}>
           <CustomCard
             className="rounded-1 mb-4 border-0"
-            classImg="object-fit-contain ratio-1 m-2 rounded-4"
+            classImg="object-fit-contain ratio-1 m-2 rounded-3"
             classText="text-900 bg-teal-100 d-inline-block text-xxs"
             classHeader="d-none"
             classTitle="d-none"
             classFooter="d-none"
             classBody="pt-0 px-2"
-            src={product.images[0]}
+            src={product.thumbnail}
             alt={product.title}
             text="FREE SHIPPING"
           >
@@ -33,7 +33,7 @@ export const ProductList = () => {
             >
               {product.description}
             </Link>
-            <Rating className="text-xs" rate={product.rate} reviews={product.reviews} />
+            <Rating className="text-xs" rating={product.rating} reviews={product.reviews} />
             <div className="text-600">
               <Price className="text-xs" classPrice="fs-6" price={product.price} />
             </div>
