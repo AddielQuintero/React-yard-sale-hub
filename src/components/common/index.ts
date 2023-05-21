@@ -4,4 +4,7 @@ export * from './Card';
 export * from './Form';
 export * from './Image';
 export * from './Input';
+export * from './Range';
+export * from './Select';
 export * from './Toast';
+export * from './index';
