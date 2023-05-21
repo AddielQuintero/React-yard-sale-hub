@@ -16,7 +16,7 @@ export const CartItem = ({ product, handleClose, showAddCart }: CartItemProps) =
     <>
       <li className="cart__item">
         <figure>
-          <LazyImage src={product.images[0]} alt={product.title} />
+          <LazyImage src={product.thumbnail} alt={product.title} />
         </figure>
 
         <div className=" d-flex flex-column justify-content-between">

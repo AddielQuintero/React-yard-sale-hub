@@ -34,7 +34,7 @@ export const Filter = () => {
             id={minPriceFilterId}
             price={filters.minPrice}
             min={0}
-            max={1000}
+            max={1200}
             onChange={handleChangeRange}
           />
         </Col>

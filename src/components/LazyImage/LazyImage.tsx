@@ -33,5 +33,5 @@ export const LazyImage = ({ src, className, alt }: LazyImageProps): JSX.Element 
     }
   }, [src, isLazyLoaded])
 
-  return <CustomImage className={`${className} bg-300`} alt={alt} src={currentSrc} imgRef={imgRef} />
+  return <CustomImage className={`${className} bg-100`} alt={alt} src={currentSrc} imgRef={imgRef} />
 }

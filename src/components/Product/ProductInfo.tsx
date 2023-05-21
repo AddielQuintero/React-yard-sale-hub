@@ -3,12 +3,13 @@ import { InfoProps } from '@types'
 import { Rating } from '@components'
 
 export const ProductInfo = (props: InfoProps) => {
-  const { description, rate, reviews, condition, refund, weight, store, availability } = props
+  const { title, description, rating, reviews, condition, refund, weight, brand, availability } = props
 
   return (
     <Container className=" d-flex flex-column justify-content-between">
-      <p className="text-900 ">{description}</p>
-      <Rating className="pt-2" rate={rate} reviews={reviews} text='Reviews' />
+      <h3 className="text-800 ">{title}</h3>
+      <p className="text-700 ">{description}</p>
+      <Rating className="pt-2" rating={rating} reviews={reviews} text='Reviews' />
       <Row className="pt-5">
         <Col xs={6} className="pb-2 small">
           <span className="fw-semibold">Availability</span>
@@ -31,9 +32,9 @@ export const ProductInfo = (props: InfoProps) => {
           <span>{condition}</span>
         </Col>
         <Col xs={6} className="pb-2 small">
-          <span className="fw-semibold">Product of</span>
+          <span className="fw-semibold">Brand</span>
           <br />
-          <span>{store}</span>
+          <span>{brand}</span>
         </Col>
       </Row>
     </Container>

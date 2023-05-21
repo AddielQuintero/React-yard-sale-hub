@@ -26,17 +26,18 @@ export const ProductDetail = () => {
     <Container className="product">
       <Row>
         <Col md={4} lg={3} className="mb-4">
-          <ProductImage src={product.images[0]} alt={product.title} />
+          <ProductImage src={product.thumbnail} alt={product.title} />
         </Col>
         <Col md={4} lg={6} className="mb-4">
           <ProductInfo
+            title={product.title}
             description={product.description}
-            rate={product.rate}
+            rating={product.rating}
             reviews={product.reviews}
             condition={product.condition}
             refund={product.refund}
             weight={product.weight}
-            store={product.store}
+            brand={product.brand}
             availability={product.availability}
           />
         </Col>

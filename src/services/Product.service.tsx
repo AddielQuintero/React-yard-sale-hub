@@ -24,7 +24,7 @@ export const ProductService = () => {
     return products.filter((product) => {
       return (
         product.price >= filters.minPrice &&
-        (filters.category === 'All' || filters.category === product.category.name)
+        (filters.category === 'All' || filters.category === product.category)
       )
     })
   }

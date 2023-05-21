@@ -1,11 +1,11 @@
 // Category
-export interface TCategory {
-  id: number
-  image: string
-  name: string
-  creationAt: Date
-  updatedAt: Date
-}
+// export interface TCategory {
+//   id: number
+//   image: string
+//   name: string
+//   creationAt: Date
+//   updatedAt: Date
+// }
 
 export interface TSelectCategory {
   value: string
@@ -14,11 +14,24 @@ export interface TSelectCategory {
 
 export const Category: TSelectCategory[] = [
   { value: 'All', label: 'All' },
-  { value: 'Clothes', label: 'Clothes' },
-  { value: 'Electronics', label: 'Electronics' },
-  { value: 'Furniture', label: 'Furniture' },
-  { value: 'Shoes', label: 'Shoes' },
-  { value: 'Others', label: 'Others' },
+  { value: 'smartphones', label: 'smartphones' },
+  { value: 'laptops', label: 'laptops' },
+  { value: 'fragrances', label: 'fragrances' },
+  { value: 'skincare', label: 'skincare' },
+  // { value: 'groceries', label: 'groceries' },
+  // { value: 'home-decoration', label: 'home-decoration' },
+  // { value: 'furniture', label: 'furniture' },
+  // { value: 'tops', label: 'tops' },
+  // { value: 'men-shirts', label: 'men-shirts' },
+  // { value: 'men-watches', label: 'men-watches' },
+  // { value: 'women-dresses', label: 'women-dresses' },
+  // { value: 'women-watches', label: 'women-watches' },
+  // { value: 'women-bags', label: 'women-bags' },
+  // { value: 'women-jewelry', label: 'women-jewelry' },
+  // { value: 'sunglasses', label: 'sunglasses' },
+  // { value: 'automotive', label: 'automotive' },
+  // { value: 'motorcycle', label: 'motorcycle' },
+  // { value: 'lighting', label: 'lighting' },
 ]
 
 // Product
@@ -29,19 +42,18 @@ interface TIdProduct {
 export interface TProduct extends TIdProduct {
   title: string
   price: number
+  discountPercentage: number
   description: string
-  images: string[]
-  category: TCategory
-  creationAt: Date
-  updatedAt?: Date
-  author: string
+  thumbnail: string
+  images?: string[]
+  category: string
   slug: string
   condition: string
   refund: string
   weight: number
-  store: string
+  brand: string
   availability: string
-  rate: number
+  rating: number
   reviews: number
   stock: number
 }
@@ -52,13 +64,14 @@ export interface ImageProps {
 }
 
 export interface InfoProps {
+  title: string
   description: string
   reviews: number
-  rate: number
+  rating: number
   condition: string
   refund: string
   weight: number
-  store: string
+  brand: string
   availability: string
 }
 
