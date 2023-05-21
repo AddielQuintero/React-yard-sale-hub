@@ -1,15 +1,15 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Clothes, Electronics, Furniture, Home, Login, NotFound, Orders, Product, Profile, ResetPassword, SignUp, Toys,} from '@pages'
+import { DailyDeals, CustomerService, GiftCards, Home, Login, NotFound, Orders, Product, Profile, ResetPassword, SignUp, History,} from '@pages'
 import { NavigateProps } from '@types'
 import { NavBar } from '@components'
 import { AppProvider } from '@context'
 
 const navigation: NavigateProps = [
   { name: 'All', to: '/', private: false },
-  { name: 'Clothes', to: '/clothes', private: false },
-  { name: 'Electronics', to: '/electronics', private: false },
-  { name: 'Furniture', to: '/furniture', private: false },
-  { name: 'Toys', to: '/toys', private: false },
+  { name: 'Daily deals', to: '/dailyDeals', private: false },
+  { name: 'Customer service', to: '/customerService', private: false },
+  { name: 'Gift cards', to: '/giftCards', private: false },
+  { name: 'History', to: '/history', private: false },
 ]
 
 export const App = () => {
@@ -27,10 +27,10 @@ export const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/product/:slug" element={<Product />} />
-            <Route path="/clothes" element={<Clothes />} />          
-            <Route path="/electronics" element={<Electronics />} />
-            <Route path="/furniture" element={<Furniture />} />
-            <Route path="/toys" element={<Toys />} />
+            <Route path="/dailyDeals" element={<DailyDeals />} />          
+            <Route path="/customerService" element={<CustomerService />} />
+            <Route path="/giftCards" element={<GiftCards />} />
+            <Route path="/history" element={<History />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           
