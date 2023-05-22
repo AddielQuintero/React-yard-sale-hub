@@ -27,6 +27,7 @@
       "@pages": ["src/pages/"],
       "@routes": ["src/routes/"],
       "@services": ["src/services/"],
+      "@reducers": ["src/reducers/"],
       "@context": ["src/context/"],
       "@hooks": ["src/hooks/"],
       "@types": ["src/types/"],

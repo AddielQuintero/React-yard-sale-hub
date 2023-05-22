@@ -1,3 +1,17 @@
+import { TProduct } from '@types'
+
+export interface State {
+  cart: TCart[]
+  cartPrice: number
+}
+
+export type AddToCartAction = { type: 'ADD_TO_CART'; payload: TProduct }
+export type SetCartAction = { type: 'SET_CART'; payload: TCart[] }
+export type SetCartPriceAction = { type: 'SET_CART_PRICE'; payload: number }
+export type DeleteCartAction = { type: 'DELETE_CART'; payload: number }
+
+export type Action = AddToCartAction | SetCartAction | SetCartPriceAction | DeleteCartAction
+
 export interface TCart {
   id: number
   title: string

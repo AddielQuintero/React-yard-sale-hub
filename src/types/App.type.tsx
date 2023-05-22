@@ -12,7 +12,7 @@ export interface TAppContext {
   // permissions: TPermissions
   // AuthConfigItem: TAuthConfigItem
   cart: TCart[]
-  countCartItems: number
+  cartItemsCount: number
   cartPrice: number
   taxes: number
   totalPrice: number
@@ -20,7 +20,7 @@ export interface TAppContext {
   filters: TFilters
   productFiltered: TProduct[]
   setFilters: (value: React.SetStateAction<TFilters>) => void
-  addCart: (prevState: TProduct) => void
+  addCart: (value: TCart) => void
   deleteCart: (productId: number) => void
   // login: (userName: string) => void
   // logout: () => void
@@ -31,10 +31,10 @@ export const DefaultContext = {
   // permissions: DefaultPermissions,
   // AuthConfigItem: DefaultAuthConfigItem,
   cart: [],
-  countCartItems: 0,
-  cartPrice: 0.0,
-  taxes: 0.0,
-  totalPrice: 0.0,
+  cartItemsCount: 0,
+  cartPrice: 0,
+  taxes: 0,
+  totalPrice: 0,
   products: [],
   productFiltered: [],
   filters: DefaultFilters,
