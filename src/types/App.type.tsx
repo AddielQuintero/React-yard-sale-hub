@@ -20,7 +20,7 @@ export interface TAppContext {
   filters: TFilters
   productFiltered: TProduct[]
   setFilters: (value: React.SetStateAction<TFilters>) => void
-  addCart: (value: TCart) => void
+  addCart: (value: TProduct) => void
   deleteCart: (productId: number) => void
   // login: (userName: string) => void
   // logout: () => void
