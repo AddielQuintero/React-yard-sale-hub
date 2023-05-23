@@ -1,4 +1,4 @@
-import { Action, AddToCartAction, DeleteCartAction, SetCartAction, SetCartPriceAction, State } from '@types'
+import { State, Action, AddToCartAction, DeleteCartAction, SetCartAction } from '@types'
 
 export const cartInitialState: State = {
   cart: [],
@@ -18,7 +18,7 @@ export const cartReducer = (state: State, action: Action): State => {
 
         return { ...state, cart: newCart, cartPrice: state.cartPrice + newPrice / newQuantity }
       }
-      
+
       const updatedCart = [...state.cart, { ...payload, quantity: 1 }]
       const newPrice = state.cartPrice + payload.price
       return { ...state, cart: updatedCart, cartPrice: newPrice }
@@ -36,12 +36,12 @@ export const cartReducer = (state: State, action: Action): State => {
 
     SET_CART: () => {
       const { payload } = action as SetCartAction
-      return { ...state, cart: payload }
-    },
+      const cartPrice = payload.reduce(
+        (total, currentProduct) => total + currentProduct.price * currentProduct.quantity,
+        0
+      )
 
-    SET_CART_PRICE: () => {
-      const { payload } = action as SetCartPriceAction
-      return { ...state, cartPrice: payload }
+      return { ...state, cart: payload, cartPrice: cartPrice }
     },
   }
   return actions[action.type]?.() || state

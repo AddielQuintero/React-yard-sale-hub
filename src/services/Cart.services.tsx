@@ -13,13 +13,6 @@ export const CartService = () => {
     if (savedCart) {
       const parsedCart = JSON.parse(savedCart)
       dispatch({ type: 'SET_CART', payload: parsedCart })
-
-      let totalPrice = 0
-      for (const product of parsedCart) {
-        totalPrice += product.price * product.quantity
-      }
-      // setCartPrice(totalPrice)
-      dispatch({ type: 'SET_CART_PRICE', payload: totalPrice })
     }
   }, [])
 
@@ -34,6 +27,7 @@ export const CartService = () => {
   const deleteCart = (id: number) => {
     dispatch({ type: 'DELETE_CART', payload: id })
   }
+  
   return {
     cart: state.cart,
     cartPrice: state.cartPrice,
@@ -44,5 +38,3 @@ export const CartService = () => {
     deleteCart,
   }
 }
-
-
