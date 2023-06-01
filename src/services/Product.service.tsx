@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { DefaultFilters, TFilters, TProduct } from '@types'
-
-// const BASE_URL = 'http://localhost:3000/dataStore'
-const BASE_URL = 'https://json-server-router-dom.herokuapp.com/dataStore'
+import { CONFIG } from '@config'
 
 export const ProductService = () => {
   const [products, setProducts] = useState<TProduct[]>([])
@@ -12,7 +10,7 @@ export const ProductService = () => {
 
   useEffect(() => {
     axios
-      .get(` ${BASE_URL}?_page=1&_limit=20`)
+      .get(` ${CONFIG.API_BASE}/dataStore?_page=1&_limit=20`)
       .then((response) => setProducts(response.data))
       .catch((error) => {
         console.error('Error fetching products:', error)

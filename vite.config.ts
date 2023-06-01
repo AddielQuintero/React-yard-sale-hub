@@ -12,6 +12,7 @@ export default defineConfig({
       '@components': path.resolve(__dirname, 'src/components/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@routes': path.resolve(__dirname, 'src/routes/'),
+      '@config': path.resolve(__dirname, 'src/config/'),
       '@services': path.resolve(__dirname, 'src/services/'),
       '@reducers': path.resolve(__dirname, 'src/reducers/'),
       '@context': path.resolve(__dirname, 'src/context/'),
