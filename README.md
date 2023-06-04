@@ -8,9 +8,13 @@ See project in https://react-yard-sale-hub.vercel.app/
 
 To install this project, follow these steps:
 
-```bash 
 clone the repository.
+
+```bash 
 npm install
+``` 
+
+```bash 
 npm run dev
 ```  
 

@@ -17,7 +17,7 @@ export const ProductList = () => {
         <Col xs={6} md={3} lg={2} key={product.id}>
           <CustomCard
             className="rounded-1 mb-4 border-0"
-            classImg="object-fit-contain ratio-1 m-2 rounded-3"
+            classImg="ratio-1 m-2 rounded-3"
             classText="text-900 bg-teal-100 d-inline-block text-xxs"
             classHeader="d-none"
             classTitle="d-none"
